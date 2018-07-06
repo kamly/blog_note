@@ -94,6 +94,6 @@ function updateContent($config, $type, $name, $content) {
 }
 
 function judgeError($type, $name) {
-    echo $result == -1 ? "{$type}/$name : error \n" : "{$type}/$name : {$result} \n";
+    echo $result == -1 ? "{$type}/{$name} : error \n" : "{$type}/{$name} : {$result} \n";
 }
 
