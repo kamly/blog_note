@@ -33,7 +33,7 @@ $config = [
 ```
 
 
-## 脚本使用
+## index.php 脚本使用
 
 
 ```bash
@@ -51,6 +51,18 @@ php script/index.php -p -m select -t work -n 1-test.md -t work -n 2-test.php # �
 
 ```
 
+## 定时任务脚本使用
 
+具体使用方法，参考[github-webhooks](https://github.com/kamly/github-webhooks)使用PHP消耗任务
+
+核心命令如下
+
+```bash
+cd /data/www/spare.charmingkamly.cn/blog_note
+
+git pull origin master
+
+php script/index.php -m all
+```
 
 
