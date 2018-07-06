@@ -47,7 +47,7 @@ if($method == 'all') {
         $data = explode('/', $array[$i]);
         $content = getFileContent($data[0], $data[1]);
         $result = updateContent($config, $data[0], $data[1], $content);
-        judgeError($data[0], $data[1]);
+        judgeError($data[0], $data[1], $result);
     }
 } elseif ($method == 'select') {
     if(is_array($type)) {
@@ -55,13 +55,13 @@ if($method == 'all') {
         for ($i = 0; $i < count($type); $i++) {
             $content = getFileContent($type[$i], $name[$i]);
             $result = updateContent($config, $type[$i], $name[$i], $content);
-            judgeError($type[$i], $name[$i]);
+            judgeError($type[$i], $name[$i], $result);
         }
     } else {
         // 打开文件，更新数据
         $content = getFileContent($type, $name);
         $result = updateContent($config, $type, $name, $content);
-        judgeError($type, $name);
+        judgeError($type, $name, $result);
     }
 }
 
@@ -93,7 +93,7 @@ function updateContent($config, $type, $name, $content) {
     return $affectedRows;
 }
 
-function judgeError($type, $name) {
+function judgeError($type, $name, $result) {
     echo $result == -1 ? "{$type}/{$name} : error \n" : "{$type}/{$name} : {$result} \n";
 }
 
