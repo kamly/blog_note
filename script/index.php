@@ -47,7 +47,7 @@ if($method == 'all') {
         $data = explode('/', $array[$i]);
         $content = getFileContent($data[0], $data[1]);
         $result = updateContent($config, $data[0], $data[1], $content);
-        echo $result == -1 ? "error \n" : "{$data[0]}/$data[1] : {$result} \n";
+        judgeError($data[0], $data[1]);
     }
 } elseif ($method == 'select') {
     if(is_array($type)) {
@@ -55,13 +55,13 @@ if($method == 'all') {
         for ($i = 0; $i < count($type); $i++) {
             $content = getFileContent($type[$i], $name[$i]);
             $result = updateContent($config, $type[$i], $name[$i], $content);
-            echo $result == -1 ? "error \n" : "{$data[0]}/$data[1] : {$result} \n";
+            judgeError($type[$i], $name[$i]);
         }
     } else {
         // 打开文件，更新数据
         $content = getFileContent($type, $name);
         $result = updateContent($config, $type, $name, $content);
-        echo $result == -1 ? "error \n" : "{$data[0]}/$data[1] : {$result} \n";
+        judgeError($type, $name);
     }
 }
 
@@ -92,3 +92,8 @@ function updateContent($config, $type, $name, $content) {
     $sqlhelper->close_connect();
     return $affectedRows;
 }
+
+function judgeError($type, $name) {
+    echo $result == -1 ? "{$type}/$name : error \n" : "{$type}/$name : {$result} \n";
+}
+
