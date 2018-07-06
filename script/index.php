@@ -47,9 +47,7 @@ if($method == 'all') {
         $data = explode('/', $array[$i]);
         $content = getFileContent($data[0], $data[1]);
         $result = updateContent($config, $data[0], $data[1], $content);
-        if ($result == -1) {
-            echo 'error';
-        }
+        echo $result == -1 ? "error \n" : "{$data[0]}/$data[1] : {$result} \n";
     }
 } elseif ($method == 'select') {
     if(is_array($type)) {
@@ -57,17 +55,13 @@ if($method == 'all') {
         for ($i = 0; $i < count($type); $i++) {
             $content = getFileContent($type[$i], $name[$i]);
             $result = updateContent($config, $type[$i], $name[$i], $content);
-            if ($result == -1) {
-                echo 'error';
-            }
+            echo $result == -1 ? "error \n" : "{$data[0]}/$data[1] : {$result} \n";
         }
     } else {
         // 打开文件，更新数据
         $content = getFileContent($type, $name);
         $result = updateContent($config, $type, $name, $content);
-        if ($result == -1) {
-            echo 'error';
-        }
+        echo $result == -1 ? "error \n" : "{$data[0]}/$data[1] : {$result} \n";
     }
 }
 
