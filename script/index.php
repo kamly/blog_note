@@ -5,7 +5,7 @@ require_once __DIR__.'/config.php';
 require_once __DIR__.'/mysql.class.php';
 
 // 全部（自动化脚本），指定（一篇），需要（自动化脚本，多篇）
-// php index.php [--pull/-p]  --method/-m [all/select/need] --type/-t [article/work] --name/-n [name]  # 全部
+// php script/index.php [--pull/-p]  --method/-m [all/select/need] --type/-t [article/work] --name/-n [name]  # 全部
 
 $shortopts  = "";
 $shortopts .= "m:";  // all select need
@@ -93,6 +93,9 @@ function updateContent($config, $type, $name, $content) {
     return $affectedRows;
 }
 
+/**
+ * 判断是否正确
+ */
 function judgeError($type, $name, $result) {
     echo $result == -1 ? "{$type}/{$name} : error \n" : "{$type}/{$name} : {$result} \n";
 }
