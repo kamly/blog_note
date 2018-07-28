@@ -47,7 +47,7 @@ $config = [
 
 php script/index.php -m all # 全部更新
 
-php script/index.php -p -m select -t work -n 1-test.md -t work -n 2-test.php # 拉取最新代码 更新 work/1-test.md work/2-test.md
+php script/index.php -p -m select -t work -n 1-test -t work -n 2-test # 拉取最新代码 更新 work/1-test/1-test.md work/2-test/2-test.md
 
 ```
 
@@ -65,4 +65,7 @@ git pull origin master
 php script/index.php -m all
 ```
 
+## todo
+
+1. 目前只能针对性更新md
 
