@@ -16,7 +16,7 @@ $shortopts .= "p::"; // pull
 $longopts  = array(
     "method:",   // all select need
     "type:",     // article work
-    "name:",       // id
+    "name:",       // name
     "pull::",    // pull
 );
 $options = getopt($shortopts, $longopts);
@@ -38,8 +38,8 @@ if(isset($options['p']) || isset($options['pull'])) {
 
 if($method == 'all') {
     // 全部
-    $work = glob('work/*.md');
-    $article = glob('article/*.md');
+    $work = glob('work/*/*.md');
+    $article = glob('article/*/*.md');
     $array = array_merge($work, $article);
     
     // 遍历，打开文件，更新数据
@@ -70,7 +70,7 @@ if($method == 'all') {
  */
 function getFileContent($type, $name) {
     $result = '';
-    $myfile = fopen("{$type}/{$name}", "r") or die("Unable to open file!");
+    $myfile = fopen("{$type}/${name}/{$name}", "r") or die("Unable to open file!");  // wokr/1-graduation-prodject/1-graduation-prodject
     while(!feof($myfile)) {
         $result .= fgets($myfile);
     }
