@@ -84,6 +84,7 @@ function getFileContent($type, $name) {
 function updateContent($config, $type, $name, $content) {
     // 更新
     $table = $type;
+    $content = str_replace("'", "\'", $content); // 解决mysql因为同时存在单引号更新失败的问题，将单引号转义  update work set content=' \'tests\' ' where id = 1;
     $array = array('content' => $content);
     $name = explode('-', $name);
     $where = "id = {$name[0]}";
