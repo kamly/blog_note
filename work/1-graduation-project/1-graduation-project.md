@@ -7,7 +7,7 @@
 
 ![](https://blogimags.charmingkamly.cn/1-graduation-project/1.1.png)
 
-```php
+```
 <? php
     echo '234';
     echo '234';
