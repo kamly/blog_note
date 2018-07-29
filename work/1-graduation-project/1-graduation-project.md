@@ -17,7 +17,13 @@
 
 ### 2.1 PC用户侧
 
-![](https://blogimags.charmingkamly.cn/1-graduation-project/2.1.mp4)
+<iframe 
+    height=450 
+    width=800 
+    src="https://blogimags.charmingkamly.cn/1-graduation-project/2.1.mp4" 
+    frameborder=0 
+    allowfullscreen>
+</iframe>
 
 ### 2.2 PC管理侧
 
@@ -136,8 +142,8 @@ Elasticsearch作为日志搜索引擎，Logstash作为日志上报工具，Fileb
 
 ### 7.1 PPT
 
-[]()
+[PPT](https://github.com/kamly/blog_note/blob/master/work/1-graduation-project/doc/%E6%AF%95%E8%AE%BE%E7%AD%94%E8%BE%A9.key)
 
 ### 7.2 论文
 
-[]()
+[论文](https://github.com/kamly/blog_note/blob/master/work/1-graduation-project/doc/%20%E6%AF%95%E8%AE%BE%E8%AE%BA%E6%96%87.pdf)
