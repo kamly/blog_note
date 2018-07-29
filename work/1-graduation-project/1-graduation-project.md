@@ -7,6 +7,12 @@
 
 ![](https://blogimags.charmingkamly.cn/1-graduation-project/1.1.png)
 
+```php
+<? php
+    echo '234';
+>
+```
+
 ### 1.2 产品导图
 
 #### 小程序
@@ -17,13 +23,7 @@
 
 ### 2.1 PC用户侧
 
-<iframe 
-    height=450 
-    width=800 
-    src="https://blogimags.charmingkamly.cn/1-graduation-project/2.1.mp4" 
-    frameborder=0 
-    allowfullscreen>
-</iframe>
+![](https://blogimags.charmingkamly.cn/1-graduation-project/2.1.mp4)
 
 ### 2.2 PC管理侧
 
@@ -37,7 +37,7 @@ todo  需要录制视频
 
 ### 3.1 自动化配置环境脚本
 
-系统服务架构基于 LNMP(LinuxNginxMySQLPHP)，Redis，ELKF(Elasticsearch Logstash Kibana Filebeta) 监控系统， Redis 缓存， Supervisor 进程管理工具。
+ 系统服务架构基于 LNMP(LinuxNginxMySQLPHP)，Redis，ELKF(Elasticsearch Logstash Kibana Filebeta) 监控系统， Redis 缓存， Supervisor 进程管理工具。
 
 如果这些软件的部署都采用人工手动安装，那可是一个巨大无比的工程。
 
