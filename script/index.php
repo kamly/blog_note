@@ -84,7 +84,7 @@ function getFileContent($type, $name) {
 function updateContent($config, $type, $name, $content) {
     // 更新
     $table = $type;
-    $array = array('content'=>$content);
+    $array = array('content' => "'{$content}'");
     $name = explode('-', $name);
     $where = "id = {$name[0]}";
     $sqlhelper = new sqlhelper($config['db']['dbname'],$config['db']['username'],$config['db']['password'],$config['db']['host'],$config['db']['port']);
