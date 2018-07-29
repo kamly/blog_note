@@ -10,6 +10,16 @@
 ```php
 <? php
     echo '234';
+    echo '234';
+    echo '234';
+    echo '234';
+    echo '234';
+    echo '234';
+    echo '234';
+    echo '234';
+    echo '234';
+    echo '234';
+    echo '234';
 >
 ```
 
