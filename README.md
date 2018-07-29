@@ -68,4 +68,5 @@ php script/index.php -m all
 ## todo
 
 1. 目前只能针对性更新md
+2. 日志监控
 
