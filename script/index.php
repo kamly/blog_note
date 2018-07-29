@@ -69,12 +69,11 @@ if($method == 'all') {
  * 获取文件内容
  */
 function getFileContent($type, $name) {
-    $result = '"';
+    $result = '';
     $myfile = fopen("{$type}/${name}/{$name}.md", "r") or die("Unable to open file!");  // wokr/1-graduation-prodject/1-graduation-prodject.md
     while(!feof($myfile)) {
         $result .= fgets($myfile);
     }
-    $result .= '"';
     fclose($myfile);
     return $result;
 }
