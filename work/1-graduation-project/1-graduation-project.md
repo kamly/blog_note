@@ -24,10 +24,11 @@
 
 ### 2.1 PC用户侧
 
+![](https://blogimags.charmingkamly.cn/1-graduation-project/2.1.png)
 
 ### 2.2 PC管理侧
 
-todo  需要录制视频
+![](https://blogimags.charmingkamly.cn/1-graduation-project/2.2.png)
 
 ### 2.3 小程序用户侧
 
