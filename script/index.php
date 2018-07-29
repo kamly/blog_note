@@ -69,11 +69,12 @@ if($method == 'all') {
  * 获取文件内容
  */
 function getFileContent($type, $name) {
-    $result = '';
+    $result = '"';
     $myfile = fopen("{$type}/${name}/{$name}.md", "r") or die("Unable to open file!");  // wokr/1-graduation-prodject/1-graduation-prodject.md
     while(!feof($myfile)) {
         $result .= fgets($myfile);
     }
+    $result .= '"';
     fclose($myfile);
     return $result;
 }
@@ -84,7 +85,7 @@ function getFileContent($type, $name) {
 function updateContent($config, $type, $name, $content) {
     // 更新
     $table = $type;
-    $array = array('content' => "'{$content}'");
+    $array = array('content' => $content);
     $name = explode('-', $name);
     $where = "id = {$name[0]}";
     $sqlhelper = new sqlhelper($config['db']['dbname'],$config['db']['username'],$config['db']['password'],$config['db']['host'],$config['db']['port']);
